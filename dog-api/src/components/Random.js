@@ -13,7 +13,7 @@ useEffect(() => {
     axios.get('https://dog.ceo/api/breeds/image/random')
         .then(response => {
             setInfo(response.data);
-            setName(info.message.split('/')[4].split('-').join(' ').toUpperCase())}
+            setName(response.data.message.split('/')[4].split('-').join(' ').toUpperCase())}
         )
         .catch(err => console.log(err));
     }, [])
