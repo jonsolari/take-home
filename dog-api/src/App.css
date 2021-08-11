@@ -49,6 +49,31 @@ table {
 
 /* My styles start here:       */
 
+body{
+  background-color: #005500;
+}
+
+.dog-card{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+.text{
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  font-family: Helvetica;
+  color: linen;
+
+}
+
 .dogpic{
-  width: 10%;
+  width: 200px;
+  padding: 1rem;
+  border: 5px dotted white;
+  border-radius: 10px;
 }

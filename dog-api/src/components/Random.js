@@ -26,8 +26,8 @@ useEffect(() => {
 
 
 return (
-    <div>
-        <p>{name}</p>
+    <div className="dog-card">
+        <p className="text">{name}</p>
         <img alt="a random dog" className="dogpic" src={info.message}/>
     </div>
     );
