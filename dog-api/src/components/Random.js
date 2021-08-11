@@ -6,22 +6,29 @@ import axios from 'axios';
 export default function Random(){
 
 const [info, setInfo] = useState({});
+const [name, setName] = useState();
 
    
 useEffect(() => {
     axios.get('https://dog.ceo/api/breeds/image/random')
-        .then(response => setInfo(response.data));
-}, [])
+        .then(response => {
+            setInfo(response.data);
+            setName(info.message.split('/')[4].split('-').join(' ').toUpperCase())}
+        )
+        .catch(err => console.log(err));
+    }, [])
 
-console.log("hey look:", info);
+    
 
 
 
 
-    return (
+
+
+return (
     <div>
-        <p>Hello there</p>
-        <img src={info.message}/>
+        <p>{name}</p>
+        <img alt="a random dog" className="dogpic" src={info.message}/>
     </div>
     );
-}
+} 
