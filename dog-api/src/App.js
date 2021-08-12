@@ -6,12 +6,12 @@ import About from './components/About.js';
 
 function App() {
   return (
-    <div class="app">
+    <div className="app">
       <Router>
-        <div class="nav">
-          <Link to="/random" class="navlink">RANDOM DOG</Link>
-          <Link to="/all" class="navlink">ALL DOGS</Link>
-          <Link to="/" class="navlink">ABOUT</Link>
+        <div className="nav">
+          <Link to="/random" className="navlink">RANDOM DOG</Link>
+          <Link to="/all" className="navlink">ALL DOGS</Link>
+          <Link to="/" className="navlink">ABOUT</Link>
         </div>
         <Route exact path="/random" component={Random} />
         <Route exact path="/all" component={AllDogs} />

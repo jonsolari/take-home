@@ -21,6 +21,7 @@ useEffect(() => {
 return (
     <div className="page">
         <h1>RANDOM DOG</h1>
+        <p>The thrill of chance! Which dog will you get..?</p>
         <div className="dog-card">
             <p className="text">{name}</p>
             <img alt={name} className="dogpic" src={info.message}/>
