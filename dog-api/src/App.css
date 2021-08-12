@@ -86,11 +86,9 @@ p{
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 25%;
   border: 5px dotted white;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 .text{
@@ -102,9 +100,20 @@ p{
   color: linen;
 }
 
-.dogpic{
-  width: 200px;
+img{
+  max-width: 200px;
   padding: 1rem;
+}
+
+.tenpix{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hidden{
+  display: none;
 }
 
 .nav{

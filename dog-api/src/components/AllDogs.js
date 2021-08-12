@@ -47,7 +47,7 @@ const fullList = dogList.sort();
 //display dog names
 const cards = fullList.map(
         dog =>  <div className="dog-card">
-                    <p>{dog.toUpperCase()}</p>
+                    {/* <p>{dog.toUpperCase()}</p> */}
                     <TenPics name={dog}/>
             </div>
         )
