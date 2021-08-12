@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Random from './components/Random.js';
 import AllDogs from './components/AllDogs.js';
 import About from './components/About.js';
+import TenPics from './components/TenPics.js';
 
 function App() {
   return (

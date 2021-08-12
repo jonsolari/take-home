@@ -10,14 +10,17 @@ const [name, setName] = useState();
 useEffect(() => {
     axios.get('https://dog.ceo/api/breeds/image/random')
         .then(response => {
-            setInfo(response.data);
             //getting the image URL
+            setInfo(response.data);
+            
+            //an attempt to extract the breed name from the result given by the 'random' endpoint. the naming convention seems to be a "last-first" one for most of them so i'm reversing the words
             setName(response.data.message.split('/')[4].split('-').reverse().join(' ').toUpperCase())}
-            //an attempt to extract the breed name with the 'random' endpoint. the naming convention seems to be a "last-first" one for most of them
+            
         )
         .catch(err => console.log(err));
     }, [])
 
+//display name and image
 return (
     <div className="page">
         <h1>RANDOM DOG</h1>

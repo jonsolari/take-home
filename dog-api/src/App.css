@@ -74,11 +74,19 @@ p{
   margin: 2rem;
 }
 
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
 .dog-card{
   margin: 2rem auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 25%;
   border: 5px dotted white;
