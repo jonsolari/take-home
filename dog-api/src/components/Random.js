@@ -19,9 +19,12 @@ useEffect(() => {
     }, [])
 
 return (
-    <div className="dog-card">
-        <p className="text">RANDOM DOG: {name}</p>
-        <img alt={name} className="dogpic" src={info.message}/>
+    <div className="page">
+        <h1>RANDOM DOG</h1>
+        <div className="dog-card">
+            <p className="text">{name}</p>
+            <img alt={name} className="dogpic" src={info.message}/>
+    </div>
     </div>
     );
 } 
