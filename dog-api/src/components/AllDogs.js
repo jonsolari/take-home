@@ -4,7 +4,7 @@ import axios from 'axios';
 export default function AllDogs(){
 
 const [all, setAll] = useState({});
-const [curr, setCurr] = useState();
+const [curr, setCurr] = useState([]);
    
 useEffect(() => {
     axios.get('https://dog.ceo/api/breeds/list/all')
@@ -15,21 +15,32 @@ useEffect(() => {
     }, [])
     
     const dogList = Object.keys(all);
-    let cards = []
-    
-useEffect(() => {
-    dogList.forEach(
-        dog => {axios.get(`https://dog.ceo/api/breed/${dog}/images/random`)
-            .then(response => setCurr(response.data))
-            .catch(err => console.log(err))
-        console.log(curr)
-    })
-    
-    }, [])
 
-// console.log(cards);
+    function subBreed(obj){
+        let final = [];
+        for (const [key, value] of Object.entries(obj)){
+            if (value.length > 0){
+                for(let i = 0; i < value.length; i++){
+                    final.push(`${key}-${value[i]}`)
+                }
+            }
+        }
+        return final;
+    }
 
-    // let finalCards = cards.forEach(card => <img alt="a dog" src="{card}" />)
+    
+let hyphens = subBreed(all);
+
+hyphens.forEach(
+    breed => dogList.push(breed)
+)
+
+const fullList = dogList.sort();
+    
+const cards = fullList.map(
+        dog =>  <div className="dog-card"><p>{dog}</p></div>
+        )
+
     
 
 return (
@@ -37,10 +48,7 @@ return (
         <h1>ALL DOGS</h1>
         <p>Every dog our scientists have discovered so far.</p>
         <p>Clicking on a dog's card will show you more examples.</p>
-            
-        <div>
-            
-        </div>
+        {cards}
     </div>
     );
 } 
