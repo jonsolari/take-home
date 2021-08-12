@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
+import TenPics from './TenPics.js'
 
 export default function AllDogs(){
 
@@ -43,24 +44,11 @@ hyphens.forEach(
 const fullList = dogList.sort();
 
 
-
-//use breed names to populate image endpoint URLs
-useEffect(() =>{
-    fullList.map(dog => 
-        axios.get(`https://dog.ceo/api/breed/${dog}/images/random`)
-            .then(response => 
-                console.log(response.data.message)
-            )
-            .catch(err => console.log(err))
-    )
-    
-}, [])
-
-
 //display dog names
 const cards = fullList.map(
         dog =>  <div className="dog-card">
                     <p>{dog.toUpperCase()}</p>
+                    <TenPics name={dog}/>
             </div>
         )
 
@@ -73,6 +61,7 @@ return (
         <p>Clicking on a dog's card will show you more examples.</p>
         <div className="cards">
             {cards}
+            
         </div>
     </div>
     );
