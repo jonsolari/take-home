@@ -63,6 +63,7 @@ h1{
 .page{
   display: flex;
   flex-direction: column;
+  margin: 2rem;
 }
 
 .dog-card{
@@ -89,5 +90,18 @@ h1{
 .dogpic{
   width: 200px;
   padding: 1rem;
+}
 
+.nav{
+  background-color: darkred;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.navlink{
+  color: white;
+  text-decoration: none;
+  margin: auto 1rem;
+  font-family: Helvetica;
 }

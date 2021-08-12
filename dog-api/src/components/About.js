@@ -1,8 +1,8 @@
 export default function About(){
     return(
-        <div>
+        <div className="page">
             <h1>DOGS!</h1>
-            <p>Welcome to Dogs, The Website. Make your selection above.</p>
+            <p className="text">Welcome to Dogs, The Website. Make your selection above.</p>
         </div>
     )
 }

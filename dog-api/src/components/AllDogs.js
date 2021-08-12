@@ -16,10 +16,14 @@ useEffect(() => {
     }, [])
 
 return (
-    <div className="dog-card">
-        <p className="text">Hello</p>
-        {/* <p className="text">RANDOM DOG: {name}</p>
-        <img alt={name} className="dogpic" src={info.message}/> */}
+    <div className="page">
+        <h1>ALL DOGS</h1>
+        <p className="text">Clicking on a dog's card will show you more examples.</p>
+        <div className="dog-card">
+            <p className="text">Hello</p>
+            {/* <p className="text">RANDOM DOG: {name}</p>
+            <img alt={name} className="dogpic" src={info.message}/> */}
+        </div>
     </div>
     );
 } 
