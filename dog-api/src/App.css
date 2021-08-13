@@ -158,6 +158,13 @@ img{
 
 @media only screen and (max-width: 747px){
 
+  h1{
+    font-size: 3rem;
+    font-family: Helvetica;
+    margin: auto;
+    color: linen;
+  }
+
   .dog-card{
     margin: 1rem auto;
     padding: 1rem;
