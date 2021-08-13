@@ -159,10 +159,11 @@ img{
 @media only screen and (max-width: 747px){
 
   h1{
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: Helvetica;
     margin: auto;
     color: linen;
+    text-align: center;
   }
 
   .dog-card{
