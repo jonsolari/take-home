@@ -6,12 +6,16 @@ export default function TenPics(props){
     const [pics, setPics] = useState([]);
     const [hide, toggleHide] = useState('hidden');
   
+//API naming/directory convention handler
+
     let breed = '';
     if (props.name.includes('-')){
         breed = props.name.split('-').join('/');
     } else {
         breed = props.name;
     }
+
+//switch for the additional photos' visibility
 
     function toggle(){
         if(hide == 'hidden'){
@@ -21,6 +25,8 @@ export default function TenPics(props){
         }
     }
 
+//fetching the photos
+
     useEffect(()=>{
         axios.get(`https://dog.ceo/api/breed/${breed}/images/random/10`)
             .then(response => setPics(response.data.message))
@@ -29,20 +35,20 @@ export default function TenPics(props){
 
     
 
-
+//one picture displayed by default, nine more if you click on the text. some breeds don't have ten different pictures.
     return(
     <div className="tenpix">
         <p onClick={toggle} className="text">{props.name.toUpperCase()}</p>
-        <img src={pics[0]}/>
-        <img className={hide}  src={pics[1]}/>
-        <img className={hide}  src={pics[2]}/>
-        <img className={hide}  src={pics[3]}/>
-        <img className={hide}  src={pics[4]}/>
-        <img className={hide}  src={pics[5]}/>
-        <img className={hide}  src={pics[6]}/>
-        <img className={hide}  src={pics[7]}/>
-        <img className={hide}  src={pics[8]}/>
-        <img className={hide}  src={pics[9]}/>
+        <img alt={props.name} src={pics[0]}/>
+        <img className={hide} alt={props.name} src={pics[1]}/>
+        <img className={hide} alt={props.name}  src={pics[2]}/>
+        <img className={hide} alt={props.name}  src={pics[3]}/>
+        <img className={hide} alt={props.name}  src={pics[4]}/>
+        <img className={hide} alt={props.name}  src={pics[5]}/>
+        <img className={hide} alt={props.name}  src={pics[6]}/>
+        <img className={hide} alt={props.name}  src={pics[7]}/>
+        <img className={hide} alt={props.name}  src={pics[8]}/>
+        <img className={hide} alt={props.name}  src={pics[9]}/>
         
     </div>
     )

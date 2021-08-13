@@ -58,7 +58,7 @@ return (
     <div className="page">
         <h1>ALL DOGS</h1>
         <p>Every dog our scientists have discovered so far.</p>
-        <p>Clicking on a dog's card will show you more examples.</p>
+        <p>Clicking on a dog's breed will show you more examples.</p>
         <div className="cards">
             {cards}
             

@@ -86,6 +86,7 @@ p{
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 25%;
   border: 5px dotted white;
   border-radius: 50px;
@@ -94,7 +95,7 @@ p{
 .text{
   padding: 1rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: .2rem;
   font-family: Helvetica;
   color: linen;
@@ -120,12 +121,71 @@ img{
   background-color: darkred;
   padding: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .navlink{
   color: white;
+  font-size: 1.5rem;
   text-decoration: none;
-  margin: auto 1rem;
   font-family: Helvetica;
+}
+
+@media only screen and (max-width: 1070px){
+
+  .dog-card{
+    margin: 2rem auto;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    border: 5px dotted white;
+    border-radius: 50px;
+  }
+
+  .navlink{
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: auto 2rem;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    margin: .2rem;
+  }
+
+}
+
+@media only screen and (max-width: 747px){
+
+  .dog-card{
+    margin: 1rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    border: 5px dotted white;
+    border-radius: 50px;
+  }
+
+  .nav{
+    background-color: darkred;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navlink{
+    color: white;
+    text-decoration: none;
+    margin: auto 1rem;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    margin: .2rem;
+  }
+
 }
