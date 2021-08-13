@@ -33,23 +33,17 @@ export default function TenPics(props){
             .catch(err => console.log(err))
     }, [])
 
+    const shorter = pics.slice(1);
+    
+    const hidden = shorter.map(pic => <img className={hide} alt={props.name} src={pic}/>)
     
 
-//one picture displayed by default, nine more if you click on the text. some breeds don't have ten different pictures.
+//one picture displayed by default, nine more if you click on the text. some breeds don't have ten different pictures, so the max will display instead.
     return(
     <div className="tenpix">
         <p onClick={toggle} className="text">{props.name.toUpperCase()}</p>
         <img alt={props.name} src={pics[0]}/>
-        <img className={hide} alt={props.name} src={pics[1]}/>
-        <img className={hide} alt={props.name}  src={pics[2]}/>
-        <img className={hide} alt={props.name}  src={pics[3]}/>
-        <img className={hide} alt={props.name}  src={pics[4]}/>
-        <img className={hide} alt={props.name}  src={pics[5]}/>
-        <img className={hide} alt={props.name}  src={pics[6]}/>
-        <img className={hide} alt={props.name}  src={pics[7]}/>
-        <img className={hide} alt={props.name}  src={pics[8]}/>
-        <img className={hide} alt={props.name}  src={pics[9]}/>
-        
+        {hidden}
     </div>
     )
 }
