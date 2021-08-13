@@ -1,2 +1,4 @@
 # take-home
-take-home challenge for NMI
+Take-home challenge for NMI interview.
+
+Live deployment available at https://dogs-jonsolari.vercel.app/.
